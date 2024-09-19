@@ -1,0 +1,87 @@
+<nav
+  class="sticky top-0 z-10 flex h-14 w-full justify-center bg-neutral-950/50 px-5 text-neutral-400 backdrop-blur-md"
+>
+  <div class="flex w-full max-w-screen-2xl items-center justify-between">
+    <a routerLink="/" class="flex items-center gap-2">
+      <app-devly-icon />
+      <span class="font-semibold"> Shivam Tripathy </span>
+    </a>
+    <button (click)="toggleSidebar()" class="md:hidden">
+      <app-devly-icon name="menu" />
+    </button>
+    <section class="hidden md:flex">
+      <ul class="flex gap-3 font-semibold">
+        <li>
+          <a
+            href="#projects"
+            class="transition-colors duration-300 hover:text-neutral-200"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a
+            href="#experience"
+            class="transition-colors duration-300 hover:text-neutral-200"
+            >Experience</a
+          >
+        </li>
+        <li>
+          <a
+            href="#blog"
+            class="transition-colors duration-300 hover:text-neutral-200"
+            >Blog</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://shivam-portfolio-zeta.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            btnStyle="base"
+            class="transition-colors duration-300 hover:text-neutral-200"
+            >CV</a
+          >
+        </li>
+      </ul>
+    </section>
+  </div>
+</nav>
+
+<div
+  [ngClass]="{ hidden: !isSidebarOpen }"
+  class="sidebar w-full bg-neutral-950/50 backdrop-blur-md md:hidden"
+>
+  <ul class="flex flex-col gap-3 p-4 font-semibold">
+    <li>
+      <a
+        href="#projects"
+        class="transition-colors duration-300 hover:text-neutral-200"
+        >Projects</a
+      >
+    </li>
+    <li>
+      <a
+        href="#experience"
+        class="transition-colors duration-300 hover:text-neutral-200"
+        >Experience</a
+      >
+    </li>
+    <li>
+      <a
+        href="#blog"
+        class="transition-colors duration-300 hover:text-neutral-200"
+        >Blog</a
+      >
+    </li>
+    <li>
+      <a
+        href="https://shivam-portfolio-zeta.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        btnStyle="base"
+        class="transition-colors duration-300 hover:text-neutral-200"
+        >CV</a
+      >
+    </li>
+  </ul>
+</div>

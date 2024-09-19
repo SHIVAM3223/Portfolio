@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color: theme(colors.neutral.700);
+}
+::-webkit-scrollbar {
+  @apply h-1 w-1 border;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--color);
+  outline: 0;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 768px) {
+  .md\:py-28 {
+    padding-top: 0 !important;
+    padding-bottom: 7rem;
+  }
+}
+
+.py-16 {
+  padding-top: 0;
+  padding-bottom: 4rem;
+}
